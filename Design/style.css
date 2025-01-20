@@ -1,17 +1,17 @@
 
  
  @font-face {
-    font-family: BrownAustin;
-    src: url(../fonts/Brown\ Austin\ Sans.ttf);
+    font-family: Arlon;
+    src: url(../fonts/Arlon-Bold.ttf);
 }
 @font-face {
-    font-family: Horizon;
-    src: url(../fonts/Horizon\ Type\ -\ AcherusGrotesque-Regular.otf);
+    font-family: Arlon;
+    src: url(../fonts/Arlon-Bold.ttf);
 }
 
   
   html {
-      font-family: "BrownAustin", sans-serif;
+      font-family: "Arlon", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       overflow-x: hidden;
       scroll-behavior: smooth;
   }
@@ -59,8 +59,6 @@
         width:100%;
         transition:background .3s;
         z-index:10;
-        background-color: #1b39bb;
-        
     }
     .wrap > .top-bar2 > .menu-box-1 > ul > li > a {
         color: #000000;
@@ -102,7 +100,6 @@
         width:100%;
         transition:background .3s;
         z-index:10;
-        background-color: #1b39bb;
         text-align: right;
     }
     .nav__menu{
@@ -380,6 +377,10 @@
 .infoheader .info p{
     margin-top: 2px;
     font-weight: 900;
+    text-align: right;
+    padding-right: 60px;
+    background-color: #28953f;
+    letter-spacing: 0.05rem;
 }
 
 
@@ -588,7 +589,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
 .top-bar2 .menu-box-1 > ul > li > a {
     padding:0 20px;
     font-size:1.2rem;
-    letter-spacing:-0.1rem;
+    letter-spacing: 0rem;
     font-weight:bold;
 }
 
