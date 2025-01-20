@@ -1,33 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".slider-image");
-    let currentIndex = 0;
+const slider = document.getElementById('slider');
+const leftArrow = document.getElementById('flecha-izquierda');
+const rightArrow = document.getElementById('flecha-derecha');
 
-    function changeSlide() {
-        const currentImage = images[currentIndex];
-        currentImage.classList.remove("active");
+let currentScrollPosition = 0;
+const cardWidth = document.querySelector('.cardp').offsetWidth + 20; // Incluye el margen de 10px a ambos lados
+const visibleCards = 3; 
+const totalCards = document.querySelectorAll('.cardp').length;
+const maxScrollPosition = (totalCards - visibleCards) * cardWidth;
 
-        currentIndex = (currentIndex + 1) % images.length;
-        const nextImage = images[currentIndex];
-        nextImage.classList.add("active");
-    }
-    function updateImages() {
-        const isMobile = window.innerWidth <= 540;
-    
-        images.forEach((image, index) => {
-          if (isMobile) {
-            image.src = `./assets/mobile${index + 1}.png`;
-          } else {
-            image.src = `./assets/desktop${index + 1}.png`;
-          }
-        });
-      }
-    
-      // Llama a la función al cargar la página y al redimensionar
-      updateImages();
-      window.addEventListener("resize", updateImages);
-
-    images[0].classList.add("active"); 
-    setInterval(changeSlide, 3500); 
+// Evento para mover hacia la izquierda
+leftArrow.addEventListener('click', () => {
+  if (currentScrollPosition > 0) {
+    currentScrollPosition -= cardWidth;
+    slider.style.transform = `translateX(-${currentScrollPosition}px)`;
+  }
 });
 
-
+// Evento para mover hacia la derecha
+rightArrow.addEventListener('click', () => {
+  if (currentScrollPosition < maxScrollPosition) {
+    currentScrollPosition += cardWidth;
+    slider.style.transform = `translateX(-${currentScrollPosition}px)`;
+  }
+});

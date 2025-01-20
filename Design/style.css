@@ -52,21 +52,30 @@
     
     .top-bar2 {
         position:fixed;
-        padding-top: 20px;
+        padding-top: 10px;
         padding-bottom: 10px;
-        top:30px;
+        top:40px;
         left:0;
         width:100%;
         transition:background .3s;
         z-index:10;
+        background-color: #ffffff;
     }
+
+    .top-bar2 .logo img {
+       
+        margin-bottom: 5px;
+    }
+
     .wrap > .top-bar2 > .menu-box-1 > ul > li > a {
         color: #000000;
         font-size: 20px;
         font-weight: 600;
+        transition: all 400ms ease;
     }
     .wrap > .top-bar2 > .menu-box-1{
-        background: white;
+        margin-top: 5px;
+        background: rgb(255, 255, 255);
         margin-right: 20px;
         border: white 1px solid;
         border-radius: 20px;
@@ -198,48 +207,85 @@
 }
 }
 
-  .questions__offerautos{
-    width: 100%;
-   
-    margin: auto;
+
+.cardp {
+    width: 100%; 
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 0 10px;
+    border-radius: 2%;
     overflow: hidden;
-    padding-top: 50px;
-}
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+  }
 
-.questions__offerautos .barraautos{
-    display: flex;
-    animation: scroll2 10s linear infinite;
-    -webkit-animation:scroll2 10s linear infinite;
-    width: calc(276px * 5);
-}   
-
-.questions__offerautos .marcaautos{
-    width: 100%;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-.subtitlemarcasautos{
-    color: black;
-    font-size: 2rem;
-    margin-bottom: 25px;
-}
-
-.questions__offerautos .barraautos img{
+  .cardp .contenido img {
+    height: 40px;
     width: 200px;
-    border-radius: 50%;
-    margin: 40px;
+    padding-top: 1.1rem;
+  }
+
+
+ 
+
+  .cardp:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-4%);
+  }
+
+  .cardp > figure {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  .cardp img {
+    width: 100%;
+    height: 240px;
+    border-radius: 5px;
+  }
+
+  .cardp .contenido {
+    text-align: center;
+  }
+
+  .cardp .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+    position: relative;
+    text-align: center;
+  }
+
+  .questions__offerautos {
+    width: calc(100% - 20px); 
+    margin: auto;
+    overflow: hidden; 
+    padding-top: 30px;
+  }
+
+  .flechaderecha {	
+    cursor: pointer;
 }
 
-@keyframes scroll2 {
-    0%{
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    100%{
-        -webkit-transform: translateX(calc(-276px * 5));
-        transform: translateX(calc(-276px * 5));
-    }
+.flechaizquierda {	
+    cursor: pointer;
 }
+  
+  
+.barraautos {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+
   
   a {
       color:inherit;
@@ -360,29 +406,53 @@
       min-width:1180px;
   }
 
-.infoheader{
-    height: 35px;
-    position:fixed;
-    
-    top:0;
-    left:0;
-    width:100%;
-    transition:background .3s;
-    z-index:10;
-    background-color: #ffffff
-   
-}
-
-
-.infoheader .info p{
-    margin-top: 2px;
-    font-weight: 900;
-    text-align: right;
-    padding-right: 60px;
+  .infoheader {
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background 0.3s;
+    z-index: 10;
     background-color: #28953f;
-    letter-spacing: 0.05rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0px;
 }
 
+.info {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    margin-left: auto; 
+}
+
+.info .logowsp {
+    margin-right: 10px; 
+    width: 20px;
+    height: 20px;
+}
+
+.info .language {
+    color: #ffffff;
+    font-weight: 900;
+    margin: 0;
+    font-size: 17px;
+    padding-right: 50px;
+    text-decoration: none;
+}
+
+.info .language:hover {
+    color: #ffffff;
+    font-weight: 900;
+    margin: 0;
+    font-size: 17px;
+    padding-right: 50px;
+    text-decoration: underline;
+    transition: all 400ms ease;
+}
 
 
   .barrainfo .info{
@@ -444,7 +514,7 @@
     width:100%;
     transition:background .3s;
     z-index:10;
-    background-color: #1b39bb
+    background-color: #ffffff
   }
 
 .mobile-menu-bar > .top-bar{
@@ -458,7 +528,7 @@
 }
 html.not-scroll-top-0 .mobile-menu-bar {
     
-    background-color:#1b39bb;
+    background-color:#ffffff;
     box-shadow:3px 0px 8px 1px #afafaf;
     transition: 0.4s;
 } 
@@ -486,22 +556,14 @@ html.not-scroll-top-0 .mobile-menu-bar {
 }
 
 
-.wrap > .top-bar2:hover {
-    background-color:#1b39bb
-}
-html.not-scroll-top-0 .top-bar2 {
-    
-    background-color:#1b39bb;
-    
-    
-} 
+
 
 
 
 
 
 .wrap > .top-bar2 > .menu-box-1 > ul > li > a:hover , html.not-scroll-top-0 .wrap > .top-bar2 > .menu-box-1 > ul > li > a {
-    color:#eb640a
+    color:#ea5b15
 }
 
 
@@ -618,7 +680,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
     width:100px;
     height:2px;
     background-color:#d36913;
-    transition:top 0.3s, left 0.3s, width 0.3s, height 0.3s;
+    transition: top 0.3s, left 0.3s, width 0.3s, height 0.3s;
     z-index:1000000000000;
 }
 /* 컨텐트 박스, 서브메뉴 박스 */
@@ -831,7 +893,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
     justify-content: center;
     align-items: center;
    
-    top: 100px;
+    top: 115px;
     margin-bottom: 100px;
 }
 
@@ -847,7 +909,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Oculta cualquier imagen fuera de la vista */
+    padding-bottom: 20px;
     display: flex; /* Para alinear las imágenes en fila */
 }
 
@@ -1243,7 +1305,6 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
         display: grid;
         align-items: center;
         grid-template-rows: repeat(1, 1fr);
-        gap: 8px;
         grid-template-columns: 50px 1fr 50px;
     
 }
@@ -2305,10 +2366,9 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
   }
 
 .footer {
-  background-color: #1b39bb;
+  background-color: #414542;
   color: #ffffff;
-  padding: 0px 20px;
-
+  padding: 0px 5%;
 }
 
 .footer-container {
@@ -2331,14 +2391,13 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
 .footer-logo {
     width: 100%;
-  
     height: 100px;
    
   }
 
 .footer-logo img {
-  width: 220px;
-  height: 50px;
+  width: 17rem;
+  height: 4.5rem;
 }
 
 .motto-button{
@@ -2381,12 +2440,13 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
 /* Contenido del footer */
 .footer-content {
-    padding-top: 50px;
+    padding-top: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr) 300px;
   gap: 20px;
   text-align: left;
   align-items: start;
+  margin-bottom: 200px;
 }
 
 .footer-column{
@@ -2394,9 +2454,9 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 }
 
 .footer-column h3 {
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .footer-column p,
@@ -2413,18 +2473,28 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
 .footer-column ul li a {
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .footer-column ul li a:hover {
   text-decoration: underline;
 }
 
+.footer-column li {
+    padding-bottom: 20px;
+}
+
+.footer-column a {
+    font-size: 1rem;
+}
+
 
 .footer-social {
     display: flex; 
-    padding-top: 35px;
-    gap: 15px; 
+    padding-top: 20px;
+    gap: 8px; 
+    padding-left: 10px;
+    padding-left: 1.4rem;
   }
   
   .social-icon {
@@ -2433,7 +2503,6 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     align-items: center;
     width: 40px;
     height: 40px;
-    border: 1px solid #ffffff; 
     border-radius: 50%;
     color: #ffffff; 
     font-size: 20px; 
@@ -2443,17 +2512,16 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
   
   .social-icon:hover {
     background-color: #ffffff; 
-    color: #01366e; 
+    color: #ea5b15; 
   }
 
   
-  .footer-bottom {
-    
+  .footer-bottom {   
     font-size: 12px;
     text-align: center;
     margin-top: 20px;
-    border-top: 1px solid #ffffff50;
     padding-top: 10px;
+    padding-bottom: 30px;
   }
 
   @media (max-width: 1024px) {
@@ -2550,7 +2618,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     width: 100%;
     display: flex;
     max-width: 100%;
-    margin-top: -80px;
+    margin-top: -70px;
     justify-content: space-between;
   }
 
@@ -2563,8 +2631,10 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
   .card {
     width: 100%;
-    margin: 20px;
-    border-radius: 6px;
+    padding: 1rem 1rem;
+    margin: 0 10px;
+    border: #e6e6e6 solid 1px;
+    border-radius: 2%;
     overflow: hidden;
     background: white;
     /*box-shadow: 0px 1px 10px rgba(0,0,0,0.2);*/
@@ -2572,10 +2642,10 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     transition: all 400ms ease;
   }
 
-  /*.card:hover {
+  .card:hover {
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
-    transform: translateY(-2%);
-  }*/
+    transform: translateY(-1%);
+  }
 
   .card > figure {
     margin-block-start: 0px;
@@ -2640,8 +2710,9 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
   .card .contenido h3 {
     font-weight: 400;
-    margin-bottom:  15px;
-    color: #1b39bb;
+    margin: 0px;
+    color: #ea5b15;
+    font-size: 2.5rem;
   }
     
   .card .contenido a {
@@ -2726,10 +2797,10 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
   .cipsurmarcafondo .carderecha a {
     text-decoration: none;
     display: inline-block;
-    background-color: #ff6525;
+    background-color: #ea5b15;
     margin-top: 10px;
     color: #ffffff;
-    border: 1px solid #ff6525;
+    border: 1px solid #ea5b15;
     border-radius: 4px;
     transition: all 400ms ease;
     padding: 7px;
@@ -2849,8 +2920,8 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     width: 100%;
     display: flex;
     max-width: 100%;
-    margin-top: -120px;
-   
+    margin-top: -90px;
+    margin-bottom: 20px;
    }
 
    .containercipsur .cardizquierda {
@@ -2862,7 +2933,6 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     
     margin-bottom: 10px;
     margin-left: 50px;
-    margin-top: 120px;
    }
 
    
