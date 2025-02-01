@@ -66,16 +66,7 @@
           <div class="mobile-menu-bar">
           </div>
          
-          <div class="infoheader text-align-right">
-                    <ul class="info">
-                       <img src="./assets/earth.svg" alt="" class="logowsp" > 
-                       <select class="language" onchange="redirectToPage(this)">
-                          <option value="">Seleccionar Idioma</option>
-                          <option value="en.html">English</option>
-                      </select>
-                    </ul>   
-                   
-          </div>
+          
 
           <div class="top-bar2">
             <div class="logo"><a href="#"><img src="./assets/LOGOBLANCOGEO.png" width=250px></a></div>
@@ -83,18 +74,28 @@
                 <ul class="nav__link nav__link--menu">
                     <img src="./assets/geoblanco.png" class="nav__image" alt="Imagen del menú">
                     <div class="line"></div>
-                    <li class="cell nav__items"><a href="#Productos" class="block nav__links"><span class="inline-block">PRODUCTOS</span></a></li>
                     <li class="cell nav__items"><a href="#Nosotros" class="block nav__links"><span class="inline-block">NOSOTROS</span></a></li>
+                    <li class="cell nav__items"><a href="#Productos" class="block nav__links"><span class="inline-block">PRODUCTOS</span></a></li>
                     <li class="cell nav__items"><a href="#Contacto" class="block nav__links"><span class="inline-block">CONTACTO</span></a></li>
                     <img src="./assets/close.svg" class="nav__close">
                     
                 </ul>
-                
+                  
                 <div class="nav__menu floatmenu">
                   <img src="./assets/menureal.svg" class="my-floatmenu">
                 </div>
                 
             </nav>
+
+            <ul class="info">
+              <img src="./assets/earth.svg" alt="" class="logowsp" > 
+              <select class="language" onchange="redirectToPage(this)">
+                 <option value="">Seleccionar Idioma</option>
+                 <option value="en.html">English</option>
+             </select>
+           </ul> 
+
+            
           </div>
           
          
@@ -295,13 +296,52 @@
     <div class="footer-container">
     
       
-  
+      
     
       <div class="footer-content">
         
         
-        <div class="footer-logo">
-            <img src="./assets/LOGOBLANCOGEO.png" alt="Logo"  />
+        
+            <div class="footer-column1">
+              <div class="footer-logo">
+                <img src="./assets/LOGOBLANCOGEO.png" alt="Logo"  />
+              </div>
+              <ul>
+                <li class="lifon"> <i aria-hidden="true" class="fas fa-phone"></i><a class="fon1" href="#">+51 909090</a></li>
+                <li class="lifon"> <i aria-hidden="true" class="fas fa-phone"></i><a class="fon1" href="">89898999</a></li>
+                <li class="lifon"> <i aria-hidden="true" class="fas fa-map-marker-alt"></i><a class="fon1" href="">TRUJILLO, PERU</a></li>
+            </ul>
+            </div>
+        
+       
+        <div class="footer-column">
+          <h3>SOBRE GEOPACKING</h3>
+          <ul>
+            
+            <li><a href="#">HISTORIA</a></li>
+            <li><a href="">CALIDAD</a></li>
+            <li><a href="">MEDIO AMBIENTE</a></li>
+        </ul>
+        </div>
+        <div class="footer-column">
+          <h3>COMUNICACIONES</h3>
+          <ul>
+            <li><a href="#Marcas">FOLLETOS</a></li>
+            <!--<li><a href="https://api.whatsapp.com/send?phone=51947404154&text=Hola,%20me%20gustaria%20obtener%20m%C3%A1s%20información">Contacto</a></li>-->
+          </ul>
+          <h3>DISTRIBUIDORES</h3>
+            <ul>
+              <li><a href="#Marcas">PERU</a></li>
+              <li><a href="#Productos">EXTERIOR</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+          <h3>CENTRO DE ATENCION</h3>
+          <ul>
+            <li><a href="https://api.whatsapp.com/send?phone=51947404154&text=Hola,%20me%20gustaria%20obtener%20m%C3%A1s%20información">CONTACTO</a></li>
+            <li><a href="#">REPRESENTANTES</a></li>
+            <li><a href="#">PROVEEDORES</a></li>
+            <h3>GEOPACKING SOCIAL</h3>
             <div class="footer-social">
               <a href="https://www.facebook.com/Perupack.pe" class="social-icon"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.linkedin.com/company/perupack/?originalSubdomain=pe" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -309,42 +349,25 @@
               <a href="https://www.instagram.com/perupack.pe" class="social-icon"><i class="fab fa-youtube"></i></a>
               <a href="https://www.tiktok.com/@perupack" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
             </div>
-        </div>
-       
-        <div class="footer-column">
-          <h3>Productos y Soluciones</h3>
-          <ul>
-            <li><a>Productos</a></li>
-            <li><a>Articulos</a></li>
-            <li><a>Distribuidores</a></li>
-        </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Mapa de Sitio</h3>
-          <ul>
-            <li><a href="#Marcas">Productos</a></li>
-            <li><a href="#Productos">Nosotros</a></li>
-            <li><a href="https://api.whatsapp.com/send?phone=51947404154&text=Hola,%20me%20gustaria%20obtener%20m%C3%A1s%20información">Contacto</a></li>
           </ul>
         </div>
+
         <div class="footer-column">
-          <h3>Otros Enlaces</h3>
-          <ul>
-            <li><a href="#">Trabaja con nosotros</a></li>
-            <li><a href="#">Comprobante Electrónico</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-            <li><a href="#">Políticas de privacidad</a></li>
-          </ul>
+          <h3>QUIERO RECIBIR NOTICIAS</h3>
+            <input type="text" placeholder="NOMBRE" class="botnombre">
+            <input type="email" placeholder="EMAIL" class="botnombre">
+            <button class="subs">SUSCRIBIRSE</button>
         </div>
   
         
       </div>
   
      
-      <div class="footer-bottom">
-        <p>&copy; Copyright 2025 Geopacking.</p>
-        
-      </div>
+      
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; GEOPACKING. Todos los derechos reservados.</p>
+      
     </div>
   </footer>
 

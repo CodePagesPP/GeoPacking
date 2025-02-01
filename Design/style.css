@@ -54,7 +54,7 @@
         position:fixed;
         padding-top: 10px;
         padding-bottom: 10px;
-        top:40px;
+      
         left:0;
         width:100%;
         transition:background .3s;
@@ -105,7 +105,7 @@
     .top-bar2 {
         position:fixed;
         padding-top: 30px;
-        top:30px;
+       
         left:0;
         width:100%;
         transition:background .3s;
@@ -426,8 +426,10 @@
     align-items: center;
     list-style: none;
     margin: 10px;
-    padding: 0;
-    margin-left: auto; 
+    right: 10px;
+    position: absolute;
+    top: 17px;
+    gap: 5px;
 }
 
 .info .logowsp {
@@ -489,7 +491,7 @@
 
     
     .top-bar2{
-        text-align: right;
+        text-align: center;
         z-index: 100000;
     }
 
@@ -506,7 +508,7 @@
     position:fixed;
     padding-top: 20px;
     left:0;
-    top:40px;
+    
     height: 68px;
     width:100%;
     transition:background .3s;
@@ -890,7 +892,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
     justify-content: center;
     align-items: center;
    
-    top: 115px;
+    top: 82px;
     margin-bottom: 100px;
 }
 
@@ -2365,11 +2367,10 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 .footer {
   background-color: rgb(0, 0, 0);
   color: #ffffff;
-  padding: 0px 5%;
 }
 
 .footer-container {
- width: 98%;
+ width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto auto auto;
@@ -2389,12 +2390,13 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 .footer-logo {
     width: 100%;
     height: 100px;
+   position: relative;
    
   }
 
 .footer-logo img {
   width: 17rem;
-  height: 5.2rem;
+  height: 3.7rem;
 }
 
 .motto-button{
@@ -2439,15 +2441,50 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 .footer-content {
     padding-top: 100px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr) 300px;
+  grid-template-columns: repeat(4, 1fr) 300px;
   gap: 20px;
   text-align: left;
   align-items: start;
-  margin-bottom: 100px;
+  padding: 5% 5%;
+  padding-top: 7%;
+  padding-bottom: 2%;
 }
 
 .footer-column{
     margin-top: -15px;
+}
+
+.footer-column1{
+    margin-top: -15px;
+    position: relative;
+    top: -40px;
+}
+
+.botnombre{
+    font-family: Arlon;
+    padding: 10px 10px;
+    color: white;
+    background-color: #222;
+    border-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.subs{
+    font-family: Arlon;
+    padding: .5rem 4.13rem;
+    color: white;
+    background-color: #222;
+    border-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.subs:hover{
+    background-color: #ffffff; 
+    color: #ea5b15; 
 }
 
 .footer-column h3 {
@@ -2469,29 +2506,43 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 }
 
 .footer-column ul li a {
+    font-size: 14px;
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
+  transition: all 400ms ease;
 }
 
 .footer-column ul li a:hover {
-  text-decoration: underline;
+    color: #ea5b15; 
 }
 
 .footer-column li {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 .footer-column a {
     font-size: 1rem;
 }
 
+.fon1{
+    padding-left: 1rem;
+}
+
+.lifon{
+    padding-left: 20px;
+    padding-top: 8px;
+    transition: all 400ms ease;
+}
+
+.lifon:hover{
+    color: #ea5b15; 
+}
 
 .footer-social {
     display: flex; 
-    padding-top: 20px;
+    padding-top: 0px;
     gap: 8px; 
-    padding-left: 10px;
-    padding-left: 1.4rem;
+    padding-left: 0rem;
   }
   
   .social-icon {
@@ -2501,7 +2552,8 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    color: #ffffff; 
+    color: #ffffff;
+    background-color: #222; 
     font-size: 20px; 
     text-decoration: none; 
     transition: background-color 0.3s, color 0.3s;
@@ -2514,11 +2566,10 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
   
   .footer-bottom {   
-    font-size: 12px;
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    padding-bottom: 30px;
+    font-size: 13px;
+    text-align: left;
+    padding: .5rem 8rem;
+    background-color: #222;
   }
 
   @media (max-width: 1024px) {
