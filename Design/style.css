@@ -887,12 +887,11 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
 .images {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); /* Ajusta '50px' según la altura de la franja superior */
+    height: calc(100vh - 80px); 
     display: flex;
     justify-content: center;
     align-items: center;
-   
-    top: 82px;
+    top: 80px;
     margin-bottom: 100px;
 }
 
@@ -2700,6 +2699,8 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     margin-block-end: 0px;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    padding: 20px 0px;
+    text-align: center;
   }
 
   .card img {
@@ -2709,9 +2710,8 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
   }
 
   .card .america {
-    height: 350px;
-    width: 300px;
-    padding-left: 20px;
+    height: 50%;
+    width: 50%;
   }
 
   .card .contenido {
@@ -2766,7 +2766,8 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     font-weight: 400;
     margin: 0px;
     color: #ea5b15;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    text-align: center;
   }
     
   .card .contenido a {
