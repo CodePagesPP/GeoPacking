@@ -2483,7 +2483,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
 .subs{
     font-family: Arlon;
-    padding: .5rem 4.2rem;
+    padding: .5rem 3.3rem;
     color: white;
     background-color: #222;
     border-color: transparent;
@@ -2491,12 +2491,6 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     margin-bottom: 10px;
     cursor: pointer;
     transition: all 400ms ease;
-}
-
-@media (max-width: 1500px) {
-    .subs{
-        padding: .5rem 3.3rem;
-    }
 }
 
 .subs:hover{
