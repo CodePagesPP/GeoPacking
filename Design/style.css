@@ -930,7 +930,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
 }
 @media (max-width: 1366px) {
     .images {
-        height: calc(100vh - 70px); /* Reduce la altura */
+        height: calc(100vh - 80px); /* Reduce la altura */
         top: 70px; /* Ajusta la posición superior */
     }
 
