@@ -937,6 +937,18 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
     .images img {
         object-fit: fill; /* Asegura que se adapte bien */
     }
+
+    .subs{
+        font-family: Arlon;
+        padding: .5rem 3.3rem;
+        color: white;
+        background-color: #222;
+        border-color: transparent;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 400ms ease;
+    }
 }
 
 /* Tablets (pantallas entre 768px y 1024px) */
@@ -2471,7 +2483,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
 .subs{
     font-family: Arlon;
-    padding: .5rem 4.13rem;
+    padding: .5rem 4.2rem;
     color: white;
     background-color: #222;
     border-color: transparent;
