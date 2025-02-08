@@ -2493,6 +2493,12 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     transition: all 400ms ease;
 }
 
+@media (max-width: 1500px) {
+    .subs{
+        padding: .5rem 3.3rem;
+    }
+}
+
 .subs:hover{
     background-color: #ffffff; 
     color: #ea5b15; 
