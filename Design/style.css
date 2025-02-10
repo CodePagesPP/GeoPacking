@@ -2452,7 +2452,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 .footer-content {
     padding-top: 100px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 200px;
+  grid-template-columns: repeat(4, 1fr) 240px;
   gap: 20px;
   text-align: left;
   align-items: start;
@@ -2467,7 +2467,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
 .footer-column-mapasitio{
     margin-top: -15px;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
 }
 
 .footer-column1{
