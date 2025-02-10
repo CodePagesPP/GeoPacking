@@ -2452,7 +2452,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 .footer-content {
     padding-top: 100px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 300px;
+  grid-template-columns: repeat(4, 1fr) 200px;
   gap: 20px;
   text-align: left;
   align-items: start;
@@ -2465,10 +2465,15 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     margin-top: -15px;
 }
 
-.footer-column1{
+.footer-column-mapasitio{
     margin-top: -15px;
+    padding-left: 2.5rem;
+}
+
+.footer-column1{
+    margin-top: -18px;
     position: relative;
-    top: -40px;
+    margin-left: -2rem;
 }
 
 .botnombre{
