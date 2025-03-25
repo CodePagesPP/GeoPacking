@@ -2700,6 +2700,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     display: flex;
     max-width: 100%;
     margin-top: -70px;
+    padding-bottom: 80px;
     justify-content: space-between;
   }
 
