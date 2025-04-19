@@ -160,7 +160,7 @@
     
     .top-bar2 {
         position:fixed;
-        padding-top: 19px;
+        padding-top: 21.5px;
         left:0;
         width:100%;
         transition:background .3s;
@@ -247,8 +247,8 @@
     }
     .nav__close {
         position: absolute;
-        top: 5.4%;
-        right: 5px;
+        top: 4.7%;
+        right: 15px;
         width: 30px;
         cursor: pointer;
     }
@@ -264,7 +264,7 @@
     }
     .nav__image {
         position: absolute;
-        top: 7%;
+        top: 6%;
         left: 6px;
         transform: translateY(-50%); 
         width: 230px; 
@@ -721,6 +721,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
     font-size:1.2rem;
     letter-spacing: 0rem;
     font-weight:bold;
+    color: white;
 }
 
 
