@@ -24,6 +24,7 @@
     <a href="https://api.whatsapp.com/send?phone=51919286013&text=Hola,%20me%20gustaria%20obtener%20m%C3%A1s%20información" class="float push" target="_blank">
       <i class="fa fa-whatsapp my-float"></i>
       </a>
+      
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -87,13 +88,14 @@
                 
             </nav>
 
-            <ul class="info">
-              <img src="./assets/earth.svg" alt="" class="logowsp" > 
-              <select class="language" onchange="redirectToPage(this)">
-                 <option value="">Seleccionar Idioma</option>
-                 <option value="en.html">English</option>
-             </select>
-           </ul> 
+            <div class="info">
+                <div class="bandera">
+                  <a id="language-toggle" href="en.html">
+                      <img id="flag" src="./assets/en.svg" width="30px">
+                      <span id="language-text">EN</span>
+                  </a>
+              </div>
+            </div> 
 
             
           </div>

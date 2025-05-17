@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById('slider');
   const leftArrow = document.getElementById('flecha-izquierda');
@@ -8,86 +5,60 @@ document.addEventListener("DOMContentLoaded", () => {
   const leftArrowM = document.getElementById('flecha-izquierda-mobile');
   const rightArrowM = document.getElementById('flecha-derecha-mobile');
 
+  let currentIndex = 0;
 
-  let currentScrollPosition = 0;
-const cardWidth = document.querySelector('.cardp').offsetWidth + 22; 
-const visibleCards = 3; 
-const totalCards = document.querySelectorAll('.cardp').length;
-const maxScrollPosition = (totalCards - visibleCards) * cardWidth;
-  
+  function updateSlider() {
+    const isMobile = window.innerWidth <= 1214;
+    const card = document.querySelector('.cardp');
+    const totalCards = document.querySelectorAll('.cardp').length;
 
+    if (!card) return;
 
-  function updateImages() {
-      const isMobile = window.innerWidth <= 540;
-  
-        if (isMobile) {
-          const cardWidth = document.querySelector('.cardp').offsetWidth + 18; 
-          // Evento para mover hacia la izquierda
-          leftArrow.remove();
-          rightArrow.remove();
+    const cardWidth = card.offsetWidth + 20;
+    const visibleCards = isMobile ? 1 : 3;
+    const maxIndex = totalCards - visibleCards;
 
+    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 
-        leftArrowM.addEventListener('click', () => {
-          if (currentScrollPosition > 0) {
-            currentScrollPosition -= cardWidth;
-            slider.style.transform = `translateX(-${currentScrollPosition}px)`;
-          }
-        });
+    // Habilita o deshabilita flechas según el caso
+    const updateArrows = (left, right) => {
+      left.disabled = currentIndex === 0;
+      right.disabled = currentIndex === maxIndex;
+    };
 
-        // Evento para mover hacia la derecha
-        rightArrowM.addEventListener('click', () => {
-          if (currentScrollPosition < maxScrollPosition) {
-            currentScrollPosition += cardWidth;
-            slider.style.transform = `translateX(-${currentScrollPosition}px)`;
-          }
-        });
-
-
-        } 
-        
-        
-        
-        else {
-          const cardWidth = document.querySelector('.cardp').offsetWidth + 22; 
-          // Evento para mover hacia la izquierda
-            leftArrow.addEventListener('click', () => {
-              if (currentScrollPosition > 0) {
-                currentScrollPosition -= cardWidth;
-                slider.style.transform = `translateX(-${currentScrollPosition}px)`;
-              }
-            });
-
-            // Evento para mover hacia la derecha
-            rightArrow.addEventListener('click', () => {
-              if (currentScrollPosition < maxScrollPosition) {
-                currentScrollPosition += cardWidth;
-                slider.style.transform = `translateX(-${currentScrollPosition}px)`;
-              }
-            });
-
-            leftArrowM.addEventListener('click', () => {
-              if (currentScrollPosition > 0) {
-                currentScrollPosition -= cardWidth;
-                slider.style.transform = `translateX(-${currentScrollPosition}px)`;
-              }
-            });
-    
-            // Evento para mover hacia la derecha
-            rightArrowM.addEventListener('click', () => {
-              if (currentScrollPosition < maxScrollPosition) {
-                currentScrollPosition += cardWidth;
-                slider.style.transform = `translateX(-${currentScrollPosition}px)`;
-              }
-            });
-
-        }
-
+    if (isMobile) {
+      updateArrows(leftArrowM, rightArrowM);
+    } else {
+      updateArrows(leftArrow, rightArrow);
     }
-  
-  
-    updateImages();
-    window.addEventListener("resize", updateImages);
+  }
 
-  images[0].classList.add("active"); 
-  setInterval(changeSlide, 3500); 
+  function moveLeft() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  }
+
+  function moveRight() {
+    const totalCards = document.querySelectorAll('.cardp').length;
+    const visibleCards = window.innerWidth <= 1214 ? 1 : 3;
+    const maxIndex = totalCards - visibleCards;
+
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateSlider();
+    }
+  }
+
+  leftArrow.addEventListener('click', moveLeft);
+  rightArrow.addEventListener('click', moveRight);
+  leftArrowM.addEventListener('click', moveLeft);
+  rightArrowM.addEventListener('click', moveRight);
+
+  window.addEventListener("resize", () => {
+    updateSlider(); // Recalcular al redimensionar
+  });
+
+  updateSlider(); // Inicial
 });

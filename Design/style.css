@@ -581,6 +581,8 @@
         z-index: 100000;
     }
 
+    
+
     .mobile-menu{
      display:none;
      width: 100%;
@@ -2897,6 +2899,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     .flechas-laterales {
       display: none;
     }
+    
   
     .flechas-abajo {
       display: flex;
@@ -3192,11 +3195,11 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
         margin-top: 38px;
        }  
 
-       .top-bar2 .bandera {
+     .bandera {
         display: inline-block;
         margin-left: 10px; 
         vertical-align: middle;
-        padding-top: 35px;
+   
     }   
 
        section > .news > .layout > .box-1 > .title {
@@ -3262,12 +3265,12 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
   
 
-  .top-bar2 .bandera {
+   .bandera {
     display: inline-block;
     margin-left: 10px; 
     vertical-align: middle;
     padding-bottom: 4px;
-    margin-top: -26px; 
+    margin-top: 5px; 
 }
 
 
