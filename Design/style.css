@@ -2900,7 +2900,10 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
       display: none;
     }
     
-  
+    #flecha-izquierda, #flecha-derecha{
+        display: none;
+    }
+
     .flechas-abajo {
       display: flex;
       justify-content: center;
