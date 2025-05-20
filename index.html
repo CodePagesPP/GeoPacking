@@ -345,12 +345,14 @@
           </ul>
         </div>
         
-        <div class="footer-column">
-          <h3>QUIERO RECIBIR NOTICIAS</h3>
-            <input type="text" placeholder="NOMBRE" class="botnombre">
-            <input type="email" placeholder="EMAIL" class="botnombre">
-            <button class="subs">SUSCRIBIRSE</button>
-        </div>
+        <form action="https://formspree.io/f/mnndrzrv" method="POST">
+          <div class="footer-column">
+            <h3>QUIERO RECIBIR NOTICIAS</h3>
+            <input type="text" name="nombre" placeholder="NOMBRE" class="botnombre" required>
+            <input type="email" name="email" placeholder="EMAIL" class="botnombre" required>
+            <button class="subs" type="submit">SUSCRIBIRSE</button>
+          </div>
+        </form>
        
       </div>
   
