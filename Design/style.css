@@ -248,7 +248,7 @@
     }
     .nav__close {
         position: absolute;
-        top: 5%;
+        top: 5.2%;
         right: 15px;
         width: 30px;
         cursor: pointer;
@@ -265,7 +265,7 @@
     }
     .nav__image {
         position: absolute;
-        top: 6.3%;
+        top: 6.4%;
         left: 6px;
         transform: translateY(-50%); 
         width: 230px; 
