@@ -2451,7 +2451,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto auto auto;
-  row-gap: 20px;
+  row-gap: 5px;
   text-align: center;
 }
 
@@ -2568,7 +2568,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
     font-family: Arlon;
     padding: .5rem 3.3rem;
     color: white;
-    background-color: #222;
+    background-color: #ea5b15;
     border-color: transparent;
     border-radius: 10px;
     margin-bottom: 10px;
