@@ -1391,7 +1391,7 @@ html.not-scroll-top-0 .wrap .top-bar2 > .gnb > .btns >.allmenu-btn::after, .wrap
 
   section > .marcasfondos> .news > .layout > .box-1 > .title {
     
-    font-size:36px;
+    font-size:35px;
     line-height:46px;
     margin:0 0 45px 0;
     color:rgb(0, 0, 0);
@@ -1470,7 +1470,7 @@ section > .cipsurmarcafondo > .layout >  .box-1 > .title > div  {
 
 
   section > .marcasfondos > .news > .layout > .box-1 {
-    height:150px;
+    height:105px;
     position:relative;
     border-bottom:#afafaf solid 1px;
     text-align: center;
